@@ -14,15 +14,21 @@
             <div class="row-container">
                 <!-- creates columns with checkers. y = column -->
                 {% for y in range(0, columns) %}
+                    <!-- if row is even -->
                     {% if x % 2 == 0 %}
+                        <!-- if column is even -->
                         {% if y % 2 == 0 %}
                             <div class="checker"style="background-color: {{ color1 }};"></div>
+                        <!-- if column is odd -->
                         {% else %}
                             <div class="checker"style="background-color: {{ color2 }};"></div>
                         {% endif %}
+                    <!-- if row is odd -->
                     {% else %}
+                        <!-- if column is even -->
                         {% if y % 2 == 0 %}
                             <div class="checker"style="background-color: {{ color2 }};"></div>
+                        <!-- if column is odd -->
                         {% else %}
                             <div class="checker"style="background-color: {{ color1 }};"></div>
                         {% endif %}
